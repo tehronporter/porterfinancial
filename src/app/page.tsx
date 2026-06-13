@@ -20,27 +20,46 @@ export default function HomePage() {
     <>
       {/* ---------------------------------------------------------------- Hero */}
       <section className="relative overflow-hidden bg-cream">
-        <div className="pointer-events-none absolute -right-40 -top-40 h-[480px] w-[480px] rounded-full bg-blue/5" />
-        <Container className="relative grid items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
+        {/* Decorative background circles */}
+        <div className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-blue/5" />
+        <div className="pointer-events-none absolute -bottom-20 -left-20 h-[320px] w-[320px] rounded-full bg-gold/5" />
+
+        <Container className="relative grid items-center gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:py-28">
           <div className="animate-fade-up">
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-blue">
+            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue/20 bg-blue/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-blue">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-              Fractional Controller &amp; Finance Consulting
+              Fractional Controller &amp; Nonprofit Finance Specialist
             </p>
-            <h1 className="text-4xl leading-[1.08] sm:text-5xl lg:text-6xl">
+
+            <h1 className="text-4xl leading-[1.06] sm:text-5xl lg:text-[3.6rem]">
               Financial Leadership
               <span className="block text-blue">Without the Full-Time Cost</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-              Get experienced financial leadership, stronger reporting, better
-              budgeting, and improved operational systems — without hiring a
-              full-time finance executive.
+
+            <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted">
+              Your organization needs a Controller — not the overhead of hiring one full-time.
+              Porter Finance &amp; Operations brings executive-level financial leadership to
+              nonprofits, associations, and mission-driven organizations, at the right level
+              of engagement.
             </p>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-muted">
-              Porter Finance &amp; Operations helps organizations strengthen
-              financial management, improve decision-making, and build long-term
-              sustainability.
-            </p>
+
+            <ul className="mt-6 space-y-2.5">
+              {[
+                "Grants management & compliance oversight",
+                "Audit readiness & financial reporting",
+                "Budgeting, forecasting & board support",
+              ].map((benefit) => (
+                <li key={benefit} className="flex items-center gap-3 text-sm font-medium text-ink">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/15">
+                    <svg viewBox="0 0 20 20" className="h-3 w-3 text-gold" fill="currentColor" aria-hidden="true">
+                      <path d="M8.5 13.6 4.9 10l-1.2 1.2 4.8 4.8 9-9L16.3 6z" />
+                    </svg>
+                  </span>
+                  {benefit}
+                </li>
+              ))}
+            </ul>
+
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <CalendlyButton size="lg">Schedule a Discovery Call</CalendlyButton>
               <Link
@@ -50,24 +69,38 @@ export default function HomePage() {
                 Explore Services
               </Link>
             </div>
+
+            <p className="mt-6 text-xs text-muted">
+              Complimentary discovery call · No obligation
+            </p>
           </div>
 
           <div className="relative animate-fade-up">
-            <div className="relative aspect-[6/7] w-full overflow-hidden rounded-2xl border border-line shadow-xl">
+            <div className="relative aspect-[5/6] w-full overflow-hidden rounded-2xl shadow-2xl">
               <Image
                 src="/images/moniqueheadshot.png"
                 alt="Monique Porter, finance and operations executive"
                 fill
                 priority
-                sizes="(max-width: 1024px) 90vw, 45vw"
-                className="object-cover"
+                sizes="(max-width: 1024px) 90vw, 42vw"
+                className="object-cover object-top"
               />
+              {/* Bottom gradient for badge contrast */}
+              <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-navy/60 to-transparent" />
             </div>
-            <div className="absolute -bottom-5 -left-5 hidden rounded-xl border border-line bg-white px-5 py-4 shadow-lg sm:block">
-              <p className="font-serif text-3xl font-bold text-navy">15+</p>
-              <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted">
+
+            {/* Navy / gold credential badge */}
+            <div className="absolute -bottom-5 -left-5 hidden rounded-xl bg-navy px-5 py-4 shadow-xl sm:block">
+              <p className="font-serif text-3xl font-bold text-gold">15+</p>
+              <p className="text-xs font-medium uppercase tracking-[0.14em] text-white/75">
                 Years of Leadership
               </p>
+            </div>
+
+            {/* Floating specialty tag */}
+            <div className="absolute -right-4 top-6 hidden rounded-lg border border-line bg-white px-4 py-2.5 shadow-lg sm:block">
+              <p className="text-xs font-semibold text-navy">Nonprofit Specialist</p>
+              <p className="text-[11px] text-muted">Controller-Level Expertise</p>
             </div>
           </div>
         </Container>
