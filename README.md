@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Porter Finance & Operations — Website
 
-## Getting Started
+Marketing website for **Porter Finance & Operations**, a fractional
+Controller / finance consultancy for nonprofits, associations, educational
+organizations, and mission-driven businesses.
 
-First, run the development server:
+**Tagline:** _Financial Leadership Without the Full-Time Cost._
+**Primary goal:** schedule discovery calls (via Calendly).
+
+Built with **Next.js (App Router) + TypeScript + Tailwind CSS v4**.
+
+## Pages
+
+- `/` — Home (hero, trust, expertise, outcomes, services, why-us, approach, CTA)
+- `/services` — Detailed service offerings + who we serve
+- `/about` — Meet Monique Porter + areas of specialization
+- `/contact` — Contact form + inline Calendly scheduler
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build (what Vercel runs)
+npm start        # serve the production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Configuration — edit `src/lib/config.ts`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Two values must be set before launch:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Constant        | What it is                                        |
+| --------------- | ------------------------------------------------- |
+| `CALENDLY_URL`  | Monique's Calendly scheduling link                |
+| `CONTACT_EMAIL` | Where the contact form composes its `mailto:`     |
 
-## Learn More
+`SITE_URL` should be set to the final production domain (used for SEO,
+sitemap, and OpenGraph). All site copy lives in `src/lib/content.ts`.
 
-To learn more about Next.js, take a look at the following resources:
+> The contact form is intentionally backend-free: on submit it opens the
+> visitor's email client pre-filled. Calendly is the primary conversion path.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Replacing images
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Drop real photos into `public/images/`, keeping the same filenames — no code
+changes needed. Current files are branded placeholders:
 
-## Deploy on Vercel
+| File                          | Used on        | Suggested        |
+| ----------------------------- | -------------- | ---------------- |
+| `public/images/hero-monique.jpg`     | Home hero      | Portrait (6:7)   |
+| `public/images/monique-portrait.jpg` | About page     | Portrait (5:6)   |
+| `public/images/about-secondary.jpg`  | (spare)        | Boardroom/16:10  |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The brand logo lockups supplied in the brief are kept at
+`public/images/logo-on-white.png` and `public/images/logo-on-navy.png` for
+social/print use. The header and footer render a crisp CSS wordmark
+(`src/components/Logo.tsx`) for sharpness at every size.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Brand system
+
+- Navy `#0F2744` · Blue `#2D5DA8` · Gold `#D4A437` · Background `#F8FAFC`
+- Headings: Playfair Display · Body: Inter (loaded via `next/font`)
+- Theme tokens live in `src/app/globals.css` (`@theme`)
+
+## Deploy to Vercel
+
+1. Push to GitHub (already wired to
+   `https://github.com/tehronporter/porterfinancial.git`).
+2. In Vercel, **Import Project** → select this repo. Framework auto-detects as
+   Next.js; no build settings or environment variables required.
+3. Add the custom domain in Vercel and update `SITE_URL` in
+   `src/lib/config.ts`.
