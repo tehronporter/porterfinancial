@@ -38,7 +38,7 @@ export default function HomePage() {
 
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted">
               Your organization needs a Controller — not the overhead of hiring one full-time.
-              Porter Finance &amp; Operations brings executive-level financial leadership to
+              Porter Accounting Services brings executive-level financial leadership to
               nonprofits, associations, and mission-driven organizations, at the right level
               of engagement.
             </p>
@@ -136,7 +136,7 @@ export default function HomePage() {
         <Container>
           <SectionHeading
             eyebrow="Core Expertise"
-            title="Depth Across Finance & Operations"
+            title="Depth Across Accounting & Finance"
             description="Executive-level financial expertise with a practical, hands-on approach focused on results."
           />
           <div className="mt-10 flex flex-wrap justify-center gap-3">
@@ -223,7 +223,7 @@ export default function HomePage() {
               description="Financial leadership is more than managing numbers. It requires understanding operations, people, systems, compliance requirements, and organizational strategy."
             />
             <p className="mt-5 max-w-md text-sm leading-relaxed text-white/70">
-              Clients work with Porter Finance &amp; Operations because they need
+              Clients work with Porter Accounting Services because they need
               a trusted advisor who can connect financial insight with
               operational success.
             </p>

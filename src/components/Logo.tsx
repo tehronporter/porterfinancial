@@ -8,9 +8,9 @@ type Props = {
 };
 
 /**
- * Brand wordmark for Porter Finance & Operations.
+ * Brand wordmark for Porter Accounting Services.
  * A gold serif "P" monogram beside the PORTER wordmark with a
- * "FINANCE & OPERATIONS" line — themeable for light or dark backgrounds.
+ * "ACCOUNTING SERVICES" line — themeable for light or dark backgrounds.
  */
 export default function Logo({
   tone = "dark",
@@ -24,7 +24,7 @@ export default function Logo({
   return (
     <Link
       href="/"
-      aria-label="Porter Finance & Operations — home"
+      aria-label="Porter Accounting Services — home"
       className={`group inline-flex items-center gap-3 ${className}`}
     >
       <span
@@ -43,7 +43,7 @@ export default function Logo({
           <span
             className={`mt-1 text-[10px] font-medium uppercase tracking-[0.22em] ${subColor}`}
           >
-            Finance &amp; Operations
+            Accounting Services
           </span>
         </span>
       )}

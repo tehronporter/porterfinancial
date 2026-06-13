@@ -1,6 +1,6 @@
-# Porter Finance & Operations — Website
+# Porter Accounting Services — Website
 
-Marketing website for **Porter Finance & Operations**, a fractional
+Marketing website for **Porter Accounting Services**, a fractional
 Controller / finance consultancy for nonprofits, associations, educational
 organizations, and mission-driven businesses.
 

@@ -7,7 +7,7 @@ import { CONTACT_EMAIL } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Schedule a Discovery Call",
   description:
-    "Let's discuss your organization's goals, challenges, and opportunities. Schedule a complimentary discovery call with Porter Finance & Operations.",
+    "Let's discuss your organization's goals, challenges, and opportunities. Schedule a complimentary discovery call with Porter Accounting Services.",
 };
 
 export default function ContactPage() {

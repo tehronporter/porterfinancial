@@ -4,7 +4,7 @@ import { SITE_NAME } from "@/lib/config";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: SITE_NAME,
-    short_name: "Porter F&O",
+    short_name: "Porter Acctg",
     description: "Financial Leadership Without the Full-Time Cost",
     start_url: "/",
     display: "standalone",

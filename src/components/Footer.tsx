@@ -74,7 +74,7 @@ export default function Footer() {
           <p>
             © {year} {SITE_NAME}. All rights reserved.
           </p>
-          <p>Porter Finance &amp; Operations is a financial leadership partner — not an accounting firm.</p>
+          <p>Porter Accounting Services — your trusted financial leadership partner.</p>
         </div>
       </Container>
     </footer>

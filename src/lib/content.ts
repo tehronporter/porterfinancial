@@ -1,6 +1,6 @@
 /**
  * Structured site copy, transcribed from
- * docs/Porter Finance & Operations Overview.pdf.
+ * docs/Porter Accounting Services Overview.pdf.
  * Keeping content here keeps page JSX clean and easy to update.
  */
 
@@ -193,7 +193,7 @@ export const WHY_CHOOSE_US = [
   "Audit Readiness Experience",
   "Board Reporting Support",
   "Strategic Planning Guidance",
-  "Finance & Operations Perspective",
+  "Accounting & Finance Perspective",
 ] as const;
 
 /* ---------------------------------------------------------------- Approach */

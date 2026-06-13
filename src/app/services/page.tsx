@@ -25,7 +25,7 @@ export default function ServicesPage() {
           </h1>
           <span className="mt-5 block h-px w-16 bg-gold" />
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/80">
-            Porter Finance &amp; Operations provides tailored financial
+            Porter Accounting Services provides tailored financial
             leadership and operational support to help your organization thrive —
             at the right time, for the right challenges, and at the right level of
             engagement.

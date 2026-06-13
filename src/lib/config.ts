@@ -5,7 +5,7 @@
  * these placeholders are the only things needed to go live.
  */
 
-export const SITE_NAME = "Porter Finance & Operations";
+export const SITE_NAME = "Porter Accounting Services";
 export const SITE_TAGLINE = "Financial Leadership Without the Full-Time Cost";
 export const SITE_URL = "https://porterfinancial.vercel.app";
 

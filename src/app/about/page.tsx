@@ -103,7 +103,7 @@ export default function AboutPage() {
         <Container className="max-w-3xl text-center">
           <span className="font-serif text-5xl leading-none text-gold">“</span>
           <p className="mt-2 font-serif text-2xl leading-relaxed text-navy sm:text-3xl">
-            Porter Finance &amp; Operations is not an accounting firm. It is a
+            Porter Accounting Services is more than a traditional accounting firm. We are a
             trusted financial leadership partner that helps organizations make
             better decisions, strengthen operations, and achieve their mission
             through sound financial management.
