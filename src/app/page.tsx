@@ -55,7 +55,7 @@ export default function HomePage() {
           <div className="relative animate-fade-up">
             <div className="relative aspect-[6/7] w-full overflow-hidden rounded-2xl border border-line shadow-xl">
               <Image
-                src="/images/hero-monique.jpg"
+                src="/images/moniqueheadshot.png"
                 alt="Monique Porter, finance and operations executive"
                 fill
                 priority
